@@ -18,7 +18,10 @@
 <main>
 <div class="container">
 <section>
+    <h1>やることリスト</h1>
+<ui id="list">
 
+</ui>
 </section>
 </div><!-- /.container -->
 </main>
@@ -27,10 +30,15 @@
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
 </footer>
-<script src="script.js"></script>
 <script>
-    `use strict`;
-    console.log("よく柿食う客だ");
-    </script>
+    'use strict';
+
+    let todo=['デザインカンプ作成','データ整理','勉強会の申込み','牛乳買う'];
+    todo.push('歯医者さんに行く');
+    for(let item of todo){
+        const li=`<li>${item}</li>`;
+        document.getElementById('list').insertAdjacentHTML('beforeend',li);
+    }
+</script>
 </body>
 </html>
